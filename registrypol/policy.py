@@ -29,7 +29,7 @@ class RegistryPolicy():
     def from_bytes(cls, bytes):
         values = []
 
-        matches = re.findall(rb'(\x5b\x00.*?\x5d\x00)', bytes[len(self._header):])
+        matches = re.findall(rb'(\x5b\x00.*?\x5d\x00)', bytes[len(cls._header):])
 
         for match in matches:
             values.append(RegistryValue.from_bytes(match))
