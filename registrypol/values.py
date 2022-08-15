@@ -52,7 +52,7 @@ class RegistryValue():
             self._type = type
         elif isinstance(type, str):
             if type in self._types:
-                self._type = self._types.index(type)
+                self._type = self._types[type]
             else:
                 raise ValueError(f'invalid value for type')
         else:
