@@ -44,9 +44,9 @@ To create a registry value as part of an registry policy, a `registrypol.values.
 >>> from registrypol.values import RegistryValue
 
 >>> value = RegistryValue(
-...     key='Software\Policies\Microsoft\Windows\Control Panel\Desktop',
-...     value='ScreenSaverIsSecure',
-...     type='REG_SZ',
+...     key='Software\Policies\Microsoft\Windows\SrpV2\Exe',
+...     value='EnforcementMode',
+...     type='REG_DWORD',
 ...     size=4,
 ...     data=b'\x01\x00\x00\x00'
 ... )

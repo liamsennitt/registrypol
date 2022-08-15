@@ -8,4 +8,5 @@ class TestUtils(TestCase):
         pass
 
     def test_load(self):
-        pass
+        with open('tests/files/registry.pol', 'rb') as file:
+            self.assertIsInstance(load(file), RegistryPolicy)
