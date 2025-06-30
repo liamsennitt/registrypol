@@ -81,8 +81,8 @@ class RegistryValue():
             raise TypeError(f'invalid type for data')
 
     @classmethod
-    def from_bytes(cls, bytes):
-        key, value, type, size, data = bytes[2:-2].split(b'\x3b\x00')
+    def from_bytes(cls, input_bytes):
+        key, value, type, size, data = bytes(input_bytes[2:-2]).split(b'\x3b\x00', 4)
 
         return cls(
             key=key.decode('utf-16-le'),
