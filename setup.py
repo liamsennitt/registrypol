@@ -7,7 +7,7 @@ with open('README.md', 'r') as file:
 
 setup(
     name='registrypol',
-    version='1.0.0',
+    version='1.0.1',
     author='Liam Sennitt',
     description='Windows Registry Policy parser and emitter for Python',
     long_description=long_description,
