@@ -1,6 +1,6 @@
 # RegistryPol
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/liamsennitt/registrypol/build.yml?branch=main)](https://github.com/liamsennitt/registrypol/
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/liamsennitt/registrypol/build.yml?branch=main)](https://github.com/liamsennitt/registrypol/actions/workflows/build.yml)
 [![PyPI](https://img.shields.io/pypi/v/registrypol)](https://pypi.org/project/registrypol/)
 [![GitHub](https://img.shields.io/github/license/LiamSennitt/registrypol)](LICENSE)
 
