@@ -1,6 +1,6 @@
 from unittest import TestCase
 from registrypol.policy import RegistryPolicy
-from registrypol.utils import dump, load
+from registrypol.utils import load
 
 
 class TestUtils(TestCase):

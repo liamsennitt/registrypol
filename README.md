@@ -1,6 +1,6 @@
 # RegistryPol
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/liamsennitt/registrypol/build.yml?branch=main)](https://github.com/liamsennitt/registrypol/actions/workflows/build.yml)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/liamsennitt/registrypol/build.yml?branch=main)](https://github.com/liamsennitt/registrypol/
 [![PyPI](https://img.shields.io/pypi/v/registrypol)](https://pypi.org/project/registrypol/)
 [![GitHub](https://img.shields.io/github/license/LiamSennitt/registrypol)](LICENSE)
 
@@ -19,21 +19,21 @@ $ pip install registrypol
 Start by importing the `registrypol` module.
 
 ```python
->>> import registrypol
+import registrypol
 ```
 
 The function `registrypol.load`, loads an registry policy file.
 
 ```python
->>> with open('registry.pol', 'rb') as file:
-...     registrypol.load(file)
+with open('registry.pol', 'rb') as file:
+    registrypol.load(file)
 ```
 
 In addition to loading an existing registry policy, policies created using the relevant Values can be dumped to a file using the `registrypol.dump` function.
 
 ```python
->>> with open('registry.pol', 'wb') as file:
-...     registrypol.dump(policy, file)
+with open('registry.pol', 'wb') as file:
+    registrypol.dump(policy, file)
 ```
 
 ### RegistryValue
@@ -41,15 +41,15 @@ In addition to loading an existing registry policy, policies created using the r
 To create a registry value as part of an registry policy, a `registrypol.values.RegistryValue` must be created.
 
 ```python
->>> from registrypol.values import RegistryValue
+from registrypol.values import RegistryValue
 
->>> value = RegistryValue(
-...     key='Software\Policies\Microsoft\Windows\SrpV2\Exe',
-...     value='EnforcementMode',
-...     type='REG_DWORD',
-...     size=4,
-...     data=b'\x01\x00\x00\x00'
-... )
+value = RegistryValue(
+    key='Software\Policies\Microsoft\Windows\SrpV2\Exe',
+    value='EnforcementMode',
+    type='REG_DWORD',
+    size=4,
+    data=b'\x01\x00\x00\x00'
+)
 ```
 
 ### RegistryPolicy
@@ -59,11 +59,11 @@ To create an registry policy one or more registry values must be created as desc
 These values can then be used to create an `registrypol.policy.RegistryPolicy`.
 
 ```python
->>> from registrypol.policy import RegistryPolicy
+from registrypol.policy import RegistryPolicy
 
->>> policy = RegistryPolicy(
-...     values=[
-...         value
-...     ]
-... )
+policy = RegistryPolicy(
+    values=[
+        value
+    ]
+)
 ```

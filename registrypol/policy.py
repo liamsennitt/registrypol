@@ -20,10 +20,10 @@ class RegistryPolicy():
                 if isinstance(value, RegistryValue):
                     pass
                 else:
-                    raise TypeError(f'invalid type for values element')
+                    raise TypeError(f'invalid type for values element: {type(value)}')
             self._values = values
         else:
-            raise TypeError(f'invalid type for values')
+            raise TypeError(f'invalid type for values: {type(values)}')
 
     @classmethod
     def from_bytes(cls, bytes):

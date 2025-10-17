@@ -29,7 +29,7 @@ class RegistryValue():
         if isinstance(key, str):
             self._key = key
         else:
-            raise TypeError(f'invalid type for key')
+            raise TypeError(f'invalid type for key: {type(key)}')
 
     @property
     def value(self):
@@ -40,7 +40,7 @@ class RegistryValue():
         if isinstance(value, str):
             self._value = value
         else:
-            raise TypeError(f'invalid type for value')
+            raise TypeError(f'invalid type for value: {type(value)}')
 
     @property
     def type(self):
@@ -54,9 +54,9 @@ class RegistryValue():
             if type in self._types:
                 self._type = self._types[type]
             else:
-                raise ValueError(f'invalid value for type')
+                raise ValueError(f'invalid value for type: {type(type)}')
         else:
-            raise TypeError(f'invalid type for type')
+            raise TypeError(f'invalid type for type: {type(type)}')
 
     @property
     def size(self):
@@ -67,7 +67,7 @@ class RegistryValue():
         if isinstance(size, int):
             self._size = size
         else:
-            raise TypeError(f'invalid type for size')
+            raise TypeError(f'invalid type for size: {type(size)}')
 
     @property
     def data(self):
@@ -78,7 +78,7 @@ class RegistryValue():
         if isinstance(data, bytes):
             self._data = data
         else:
-            raise TypeError(f'invalid type for data')
+            raise TypeError(f'invalid type for data: {type(data)}')
 
     @classmethod
     def from_bytes(cls, input_bytes):
