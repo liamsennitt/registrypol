@@ -1,6 +1,7 @@
 from unittest import TestCase
-from registrypol.values import RegistryValue
+
 from registrypol.policy import RegistryPolicy
+from registrypol.values import RegistryValue
 
 
 class TestRegistryPolicy(TestCase):
